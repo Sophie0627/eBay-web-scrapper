@@ -1,0 +1,6 @@
+D:\Scraping project\DMSkin-Miniblink-master\DMSkin.Miniblink\MiniblinkNet\bin\Debug\MiniblinkNet.dll
+D:\Scraping project\DMSkin-Miniblink-master\DMSkin.Miniblink\MiniblinkNet\bin\Debug\MiniblinkNet.pdb
+D:\Scraping project\DMSkin-Miniblink-master\DMSkin.Miniblink\MiniblinkNet\obj\Debug\MiniblinkNet.csproj.CoreCompileInputs.cache
+D:\Scraping project\DMSkin-Miniblink-master\DMSkin.Miniblink\MiniblinkNet\obj\Debug\MiniblinkNet.dll
+D:\Scraping project\DMSkin-Miniblink-master\DMSkin.Miniblink\MiniblinkNet\obj\Debug\MiniblinkNet.pdb
+D:\Scraping project\DMSkin-Miniblink-master\DMSkin.Miniblink\MiniblinkNet\obj\Debug\MiniblinkNet.csprojAssemblyReference.cache

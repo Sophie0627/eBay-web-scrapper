@@ -1,0 +1,609 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiniblinkNet</name>
+    </assembly>
+    <members>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.op_Implicit(Kyozy.MiniblinkNet.JsValue)~System.Int64">
+            <summary>
+            重载隐式转换
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.op_Implicit(System.Int64)~Kyozy.MiniblinkNet.JsValue">
+            <summary>
+            重载隐式转换
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetValueType">
+            <summary>
+            获取值类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ToInt32(System.IntPtr)">
+            <summary>
+            转换到Int32
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ToFloat(System.IntPtr)">
+            <summary>
+            转换到float
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ToDouble(System.IntPtr)">
+            <summary>
+            转换到double
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ToBoolean(System.IntPtr)">
+            <summary>
+            转换到bool
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ToString(System.IntPtr)">
+            <summary>
+            转换到string
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetProp(System.IntPtr,System.String)">
+            <summary>
+            获取属性
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="propName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.SetProp(System.IntPtr,System.String,Kyozy.MiniblinkNet.JsValue)">
+            <summary>
+            设置属性
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="propName">属性名</param>
+            <param name="v">jsValue</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.DeleteProp(System.IntPtr,System.String)">
+            <summary>
+            删除属性
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="propName">属性名</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetPropAt(System.IntPtr,System.Int32)">
+            <summary>
+            获取属性自索引
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="index">从0开始的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.SetPropAt(System.IntPtr,System.Int32,Kyozy.MiniblinkNet.JsValue)">
+            <summary>
+            设置属性自索引
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="index">从0开始的索引</param>
+            <param name="v">jsValue</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetLength(System.IntPtr)">
+            <summary>
+            获取成员数
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.SetLength(System.IntPtr,System.Int32)">
+            <summary>
+            设置成员数
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.Call(System.IntPtr,Kyozy.MiniblinkNet.JsValue,Kyozy.MiniblinkNet.JsValue[])">
+            <summary>
+            调用方法
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="function"></param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetArrayBuffer(System.IntPtr)">
+            <summary>
+            获取数组缓冲区
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetKeys(System.IntPtr)">
+            <summary>
+            获取对象Keys
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsNumber">
+            <summary>
+            JsValue是否数值型
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsString">
+            <summary>
+            JsValue是否文本型
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsBoolean">
+            <summary>
+            JsValue是否逻辑型
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsObject">
+            <summary>
+            JsValue是否对象型
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsFunction">
+            <summary>
+            JsValue是否方法型
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsUndefined">
+            <summary>
+            JsValue是否未定义
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsNull">
+            <summary>
+            JsValue是否 null
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsArray">
+            <summary>
+            JsValue是否数组
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsTrue">
+            <summary>
+            JsValue是否 true
+            </summary>
+        </member>
+        <member name="P:Kyozy.MiniblinkNet.JsValue.IsFalse">
+            <summary>
+            JsValue是否 false
+            </summary>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BindFunction(System.String,Kyozy.MiniblinkNet.wkeJsNativeFunction,System.IntPtr,System.UInt32)">
+            <summary>
+            绑定JS方法
+            </summary>
+            <param name="name">js方法名</param>
+            <param name="fn">long (IntPtr jsExecState, IntPtr userData)</param>
+            <param name="userData">用户数据</param>
+            <param name="argCount">参数个数</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BindFunction(System.String,Kyozy.MiniblinkNet.wkeJsNativeFunction,System.UInt32)">
+            <summary>
+            绑定JS方法
+            </summary>
+            <param name="name">js方法名</param>
+            <param name="fn">long (IntPtr jsExecState, IntPtr userData)</param>
+            <param name="argCount">参数个数</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BindGetter(System.String,Kyozy.MiniblinkNet.wkeJsNativeFunction,System.IntPtr)">
+            <summary>
+            绑定JS取属性
+            </summary>
+            <param name="name">属性名</param>
+            <param name="fn">long (IntPtr jsExecState, IntPtr userData)</param>
+            <param name="userData">用户数据</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BindGetter(System.String,Kyozy.MiniblinkNet.wkeJsNativeFunction)">
+            <summary>
+            绑定JS取属性
+            </summary>
+            <param name="name">属性名</param>
+            <param name="fn">long (IntPtr jsExecState, IntPtr userData)</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BindSetter(System.String,Kyozy.MiniblinkNet.wkeJsNativeFunction,System.IntPtr)">
+            <summary>
+            绑定JS置属性
+            </summary>
+            <param name="name">属性名</param>
+            <param name="fn">long (IntPtr jsExecState, IntPtr userData)</param>
+            <param name="userData">用户数据</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BindSetter(System.String,Kyozy.MiniblinkNet.wkeJsNativeFunction)">
+            <summary>
+            绑定JS置属性
+            </summary>
+            <param name="name">属性名</param>
+            <param name="fn">long (IntPtr jsExecState, IntPtr userData)</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ArgCount(System.IntPtr)">
+            <summary>
+            获取参数个数
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ArgType(System.IntPtr,System.Int32)">
+            <summary>
+            获取参数类型
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="argIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.Arg(System.IntPtr,System.Int32)">
+            <summary>
+            获取参数
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="argIndex">从0开始的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.Int32Value(System.Int32)">
+            <summary>
+            获取代表 int 的jsValue
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.FloatValue(System.Single)">
+            <summary>
+            获取代表 float 的 jsValue
+            </summary>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.DoubleValue(System.Double)">
+            <summary>
+            获取代表 double 的 jsValue
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.BoolValue(System.Boolean)">
+            <summary>
+            获取代表 bool 的 jsValue
+            </summary>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.UndefinedValue">
+            <summary>
+            获取代表 undefined 的 jsValue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.NullValue">
+            <summary>
+            获取代表 null 的 jsValue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.TrueValue">
+            <summary>
+            获取代表 true 的 jsValue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.FalseValue">
+            <summary>
+            获取代表 false 的 jsValue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.StringValue(System.IntPtr,System.String)">
+            <summary>
+            获取代表 string 的 jsValue
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.EmptyObjectValue(System.IntPtr)">
+            <summary>
+            获取代表空 object 的 jsValue
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.EmptyArrayValue(System.IntPtr)">
+            <summary>
+            获取代表空 array 的 jsValue
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GlobalObjectValue(System.IntPtr)">
+            <summary>
+            获取全局对象(window)的 JsValue 
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ObjectValue(System.IntPtr,Kyozy.MiniblinkNet.JsObject)">
+            <summary>
+            获取代表 object 的 JsValue
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="jsObj">继承此类，Overite 方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.FunctionValue(System.IntPtr,Kyozy.MiniblinkNet.jsCallAsFunction)">
+            <summary>
+            获取代表 function 的 JsValue
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="function">long (IntPtr jsExecState, long obj, jsValue[] args)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetWebView(System.IntPtr)">
+            <summary>
+            获取 WebView 句柄
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.Eval(System.IntPtr,System.String)">
+            <summary>
+            计算表达式
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="script"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.Eval(System.IntPtr,System.String,System.Boolean)">
+            <summary>
+            计算表达式
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="script"></param>
+            <param name="isInClosure">是否闭包</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.CallGlobal(System.IntPtr,Kyozy.MiniblinkNet.JsValue,Kyozy.MiniblinkNet.JsValue[])">
+            <summary>
+            调用全局方法
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="function"></param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetGlobal(System.IntPtr,System.String)">
+            <summary>
+            获取全局属性
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="propName">属性名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.SetGlobal(System.IntPtr,System.String,Kyozy.MiniblinkNet.JsValue)">
+            <summary>
+            设置全局属性
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="propName">属性名</param>
+            <param name="value">JsValue</param>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.IsJsValueValid(System.IntPtr,Kyozy.MiniblinkNet.JsValue)">
+            <summary>
+            判断一个jsValue是否是有效js值
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="value">JsValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.IsValidExecState(System.IntPtr)">
+            <summary>
+            判断一个jsExecState 是否有效
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.GetLastErrorIfException(System.IntPtr)">
+            <summary>
+            当wkeRunJs抛出异常时，可以捕获
+            </summary>
+            <param name="jsExecState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kyozy.MiniblinkNet.JsValue.ThrowException(System.IntPtr,System.String)">
+            <summary>
+            抛出异常
+            </summary>
+            <param name="jsExecState"></param>
+            <param name="Exception"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeCookieVisitor">
+            <summary>
+            访问Cookie回调
+            </summary>
+            <param name="userData">用户数据</param>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="domain">域名</param>
+            <param name="path">路径</param>
+            <param name="secure">安全，如果非0则仅发送到https请求</param>
+            <param name="httpOnly">如果非0则仅发送到http请求</param>
+            <param name="expires">过期时间 The cookie expiration date is only valid if |has_expires| is true.</param>
+            <returns>返回true 则应用程序自己处理miniblink不处理</returns>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeConsoleLevel">
+            <summary>
+            控制台消息等级
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeLoadingResult">
+            <summary>
+            载入返回值
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeLoadingResult.Succeeded">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeLoadingResult.Failed">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeLoadingResult.Canceled">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeNavigationType">
+            <summary>
+            导航类型
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeNavigationType.LinkClick">
+            <summary>
+            单击链接
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeNavigationType.FormSubmit">
+            <summary>
+            表单提交submit
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeNavigationType.BackForward">
+            <summary>
+            前进或后退
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeNavigationType.ReLoad">
+            <summary>
+            重新载入
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeNavigationType.FormReSubmit">
+            <summary>
+            表单重新提交resubmit
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeNavigationType.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeCookieCommand">
+            <summary>
+            Cookie命令
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeCookieCommand.ClearAllCookies">
+            <summary>
+            清空所有Cookies
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeCookieCommand.ClearSessionCookies">
+            <summary>
+            清空会话Cookies
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeCookieCommand.FlushCookiesToFile">
+            <summary>
+            将Cookies刷新到文件
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeCookieCommand.ReloadCookiesFromFile">
+            <summary>
+            从文件重新载入Cookies
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeProxyType">
+            <summary>
+            代理类型
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeSettingMask">
+            <summary>
+            设置的掩码
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeSettingMask.PROXY">
+            <summary>
+            代理有效
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeSettingMask.PAINTCALLBACK_IN_OTHER_THREAD">
+            <summary>
+            重画回调在其他线程
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeOtherLoadType">
+            <summary>
+            其他载入类型
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeResourceType">
+            <summary>
+            资源类型
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeProxy">
+            <summary>
+            代理
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeProxy.Type">
+            <summary>
+            代理类型
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeProxy.HostName">
+            <summary>
+            服务器名
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeProxy.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeProxy.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeProxy.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:Kyozy.MiniblinkNet.wkeSettings">
+            <summary>
+            设置
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeSettings.Proxy">
+            <summary>
+            代理
+            </summary>
+        </member>
+        <member name="F:Kyozy.MiniblinkNet.wkeSettings.Mask">
+            <summary>
+            设置掩码，掩码包含
+            </summary>
+        </member>
+    </members>
+</doc>
